@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Espace du groupe - PI Community Builder</title>
+
+    <link rel="stylesheet" href="espace-groupe.css">
+</head>
+
+<body>
+
+    <!-- ========================================
+         EN-TÊTE DU GROUPE
+         ======================================== -->
+
+    <header class="group-header">
+
+        <button id="backButton" type="button">
+            ← Retour
+        </button>
+
+        <div class="group-header-info">
+
+            <span id="groupType">
+                Groupe
+            </span>
+
+            <h1 id="groupName">
+                Chargement...
+            </h1>
+
+            <p id="groupLocation">
+                🌍 Chargement...
+            </p>
+
+        </div>
+
+    </header>
+
+
+    <!-- ========================================
+         INFORMATIONS DU GROUPE
+         ======================================== -->
+
+    <section class="group-summary">
+
+        <div class="summary-card">
+
+            <span>👥</span>
+
+            <strong id="memberCount">
+                0
+            </strong>
+
+            <small>
+                Membres
+            </small>
+
+        </div>
+
+
+        <div class="summary-card">
+
+            <span>💬</span>
+
+            <strong id="messageCount">
+                0
+            </strong>
+
+            <small>
+                Messages
+            </small>
+
+        </div>
+
+    </section>
+
+
+    <!-- ========================================
+         MENU DE L'ESPACE
+         ======================================== -->
+
+    <nav class="group-menu">
+
+        <button class="group-menu-button active" data-section="messages">
+            💬 Discussions
+        </button>
+
+        <button class="group-menu-button" data-section="members">
+            👥 Membres
+        </button>
+
+        <button class="group-menu-button" data-section="info">
+            ℹ️ Informations
+        </button>
+
+    </nav>
+
+
+    <!-- ========================================
+         CONTENU
+         ======================================== -->
+
+    <main id="groupContent">
+
+        <section id="messagesSection" class="group-section active">
+
+            <h2>
+                💬 Discussions
+            </h2>
+
+            <div id="messagesList">
+
+                <p class="loading">
+                    Chargement des discussions...
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <section id="membersSection" class="group-section">
+
+            <h2>
+                👥 Membres
+            </h2>
+
+            <div id="membersList">
+
+                <p class="loading">
+                    Chargement des membres...
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <section id="infoSection" class="group-section">
+
+            <h2>
+                ℹ️ Informations du groupe
+            </h2>
+
+            <div id="groupInfo">
+
+                <p class="loading">
+                    Chargement des informations...
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ========================================
+         SUPABASE
+         ======================================== -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script src="../../supabase/supabase.js"></script>
+
+    <script src="espace-groupe.js"></script>
+
+</body>
+
+</html>
