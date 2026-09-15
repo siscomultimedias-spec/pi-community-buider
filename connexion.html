@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Connexion - PI Community Builder</title>
+
+    <link rel="stylesheet" href="connexion.css">
+    <script src="https://sdk.minepi.com/pi-sdk.js"></script>
+</head>
+
+<body>
+
+    <main class="login-container">
+
+        <div class="logo">
+            π
+        </div>
+
+        <h1>PI COMMUNITY BUILDER</h1>
+
+        <p class="slogan">
+            Construisons nos communautés ensemble
+        </p>
+
+        <div class="login-card">
+
+            <h2>Bienvenue</h2>
+
+            <p class="intro">
+                Connectez-vous pour rejoindre et participer
+                aux communautés.
+            </p>
+
+            <button id="piLoginButton" class="login-button pi-button">
+                🟣 Se connecter avec Pi Network
+            </button>
+
+            <div class="separator">
+                <span>OU</span>
+            </div>
+
+            <button id="visitorLoginButton" class="login-button visitor-button">
+                👤 Se connecter / Créer un compte
+            </button>
+
+            <p class="info">
+                Le compte Pi permet d'accéder aux fonctions
+                réservées aux Pionniers.
+            </p>
+
+            <p class="visitor-info">
+                Les non-pionniers peuvent participer aux
+                discussions uniquement sur invitation.
+            </p>
+
+        </div>
+
+    </main>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="../supabase/supabase.js"></script>
+<script src="connexion.js"></script>
+
+</body>
+</html>
