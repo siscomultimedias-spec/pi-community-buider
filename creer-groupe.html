@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Créer un groupe - PI Community Builder</title>
+
+    <link rel="stylesheet" href="creer-groupe.css">
+</head>
+
+<body>
+
+    <div class="create-container">
+
+        <h1>➕ Créer un groupe</h1>
+
+        <p class="subtitle">
+            Construisons nos communautés ensemble
+        </p>
+
+        <label for="groupType">Type de groupe</label>
+
+        <select id="groupType">
+            <option value="">Choisissez un type</option>
+            <option value="Groupe Pays">🌍 Groupe Pays</option>
+            <option value="Groupe Ville">🏙️ Groupe Ville</option>
+            <option value="Groupe Village">🏘️ Groupe Village</option>
+            <option value="Groupe Famille">👨‍👩‍👧‍👦 Groupe Famille</option>
+            <option value="Groupe Communauté">🤝 Groupe Communauté</option>
+        </select>
+
+        <div id="groupForm" style="display:none;">
+
+            <label for="groupName">Nom du groupe</label>
+            <input
+                type="text"
+                id="groupName"
+                placeholder="Nom du groupe"
+            >
+
+            <div id="countryField">
+                <label for="countryName">Pays</label>
+                <input
+                    type="text"
+                    id="countryName"
+                    placeholder="Nom du pays"
+                >
+            </div>
+
+            <div id="cityField" style="display:none;">
+                <label for="cityName">Ville</label>
+                <input
+                    type="text"
+                    id="cityName"
+                    placeholder="Nom de la ville"
+                >
+            </div>
+
+            <div id="villageField" style="display:none;">
+                <label for="villageName">Village</label>
+                <input
+                    type="text"
+                    id="villageName"
+                    placeholder="Nom du village"
+                >
+            </div>
+
+            <div id="familyField" style="display:none;">
+                <label for="familyName">Famille</label>
+                <input
+                    type="text"
+                    id="familyName"
+                    placeholder="Nom de la famille"
+                >
+            </div>
+
+            <div id="communityField" style="display:none;">
+                <label for="communityName">Communauté</label>
+                <input
+                    type="text"
+                    id="communityName"
+                    placeholder="Nom de la communauté"
+                >
+            </div>
+
+            <button id="createButton" type="button">
+                🚀 Créer le groupe
+            </button>
+
+        </div>
+
+    </div>
+<!-- FENÊTRE DE CONFIRMATION -->
+
+<div id="successModal" class="modal-overlay">
+
+    <div class="success-modal">
+
+        <div class="success-icon">✓</div>
+
+        <h2>Groupe créé avec succès !</h2>
+
+        <p id="successMessage">
+            Votre groupe a été créé avec succès.
+        </p>
+
+        <button id="successButton" type="button">
+            Continuer
+        </button>
+
+    </div>
+
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase/supabase.js"></script>
+    <script src="creer-groupe.js"></script>
+
+</body>
+</html>
