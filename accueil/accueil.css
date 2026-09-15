@@ -1,0 +1,477 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    width: 100%;
+    min-height: 100%;
+    font-family: Arial, sans-serif;
+    background: #f3efff;
+    color: #222;
+}
+
+/* =========================
+   ACCUEIL
+========================= */
+
+.accueil {
+    width: 100%;
+}
+
+/* =========================
+   EN-TÊTE
+========================= */
+
+.accueil-header {
+    position: relative;
+    background: #6a0dad;
+    color: yellow;
+    text-align: center;
+    padding: 20px 15px 18px;
+}
+
+.accueil-header .logo {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    border-radius: 20px;
+}
+
+.accueil-header h1 {
+    margin: 10px 0 5px;
+    font-size: 28px;
+}
+
+#slogan {
+    margin: 0;
+    color: #d8c8ff;
+    font-size: 17px;
+    font-style: italic;
+}
+
+/* =========================
+   BOUTON MENU
+========================= */
+
+.menu-button {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+
+    width: 42px;
+    height: 42px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: white;
+    color: #4a148c;
+
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* =========================
+   CONTENU
+========================= */
+
+.accueil-content {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 22px 15px;
+}
+
+.welcome-card {
+    background: white;
+    border-radius: 14px;
+    padding: 18px;
+    box-shadow: 0 3px 12px rgba(0,0,0,.10);
+}
+
+.welcome-card h2 {
+    margin: 0 0 10px;
+    color: #6a0dad;
+    font-size: 22px;
+}
+
+.welcome-card p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* =========================
+   BOUTONS D'ACTION
+========================= */
+
+.action-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-top: 15px;
+}
+
+.action-button {
+    flex: 1 1 auto;
+
+    min-width: 145px;
+
+    padding: 9px 10px;
+
+    border: 1px solid #999;
+    border-radius: 8px;
+
+    background: white;
+    color: #4a148c;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.action-button:hover {
+    background: #6a0dad;
+    color: white;
+}
+
+.action-button span {
+    margin-left: 3px;
+}
+
+/* =========================
+   MENU LATERAL
+========================= */
+
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -290px;
+
+    width: 280px;
+    height: 100%;
+
+    background: white;
+
+    z-index: 1000;
+
+    box-shadow: 4px 0 15px rgba(0,0,0,.20);
+
+    transition: left .25s ease;
+}
+
+.side-menu.open {
+    left: 0;
+}
+
+.side-menu-header {
+    background: #6a0dad;
+    color: yellow;
+
+    padding: 18px 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.side-menu-header h2 {
+    margin: 0;
+    font-size: 17px;
+}
+
+.side-menu-header button {
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.side-menu nav {
+    padding: 12px;
+}
+
+.side-menu nav button {
+    width: 100%;
+
+    margin-bottom: 8px;
+
+    padding: 11px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #f3efff;
+    color: #4a148c;
+
+    text-align: left;
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+/* =========================
+   FOND DU MENU
+========================= */
+
+.menu-overlay {
+    display: none;
+
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0,0,0,.35);
+
+    z-index: 900;
+}
+
+.menu-overlay.open {
+    display: block;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .accueil-header {
+        padding: 18px 10px 16px;
+    }
+
+    .accueil-header .logo {
+        width: 105px;
+        height: 105px;
+    }
+
+    .accueil-header h1 {
+        font-size: 23px;
+    }
+
+    #slogan {
+        font-size: 15px;
+    }
+
+    .accueil-content {
+        padding: 15px 10px;
+    }
+
+    .welcome-card {
+        padding: 15px;
+    }
+
+    .welcome-card h2 {
+        font-size: 20px;
+    }
+
+    .action-grid {
+        gap: 5px;
+    }
+
+    .action-button {
+        min-width: 130px;
+        padding: 8px 7px;
+        font-size: 13px;
+    }
+}
+/* =========================
+   MESSAGE DÉFILANT
+========================= */
+
+.message-bar {
+    width: 100%;
+    height: 42px;
+    background: #ffd600;
+    color: #d50000;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.message-scroll {
+    display: inline-block;
+    padding-left: 100%;
+    animation: messageDefilant 25s linear infinite;
+}
+
+@keyframes messageDefilant {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+/* =========================
+   VISUEL COMMUNAUTÉ
+========================= */
+
+.community-visual {
+    min-height: 430px;
+    background: #dcd0ff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.community-animation {
+    font-size: 190px;
+    line-height: 1;
+    animation: globePulse 3s ease-in-out infinite;
+}
+
+.community-visual h2 {
+    margin: 25px 0 10px;
+    color: #6a0dad;
+    font-size: 30px;
+}
+
+.community-visual p {
+    margin: 0;
+    color: #555;
+    font-size: 17px;
+}
+
+@keyframes globePulse {
+    0%, 100% {
+        transform: translateY(0) scale(1);
+    }
+
+    50% {
+        transform: translateY(-12px) scale(1.06);
+    }
+}
+
+/* =========================
+   RÉSEAU DE COMMUNAUTÉ
+========================= */
+
+.community-animation {
+    position: relative;
+    width: 330px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.globe {
+    position: relative;
+    z-index: 5;
+    font-size: 190px;
+    line-height: 1;
+    animation: globePulse 3s ease-in-out infinite;
+}
+
+.community-point {
+    position: absolute;
+    z-index: 6;
+    color: #6a0dad;
+    font-size: 42px;
+    font-weight: bold;
+    animation: pointPulse 2s ease-in-out infinite;
+}
+
+.point-1 {
+    top: 15px;
+    left: 25px;
+}
+
+.point-2 {
+    top: 15px;
+    right: 25px;
+}
+
+.point-3 {
+    bottom: 15px;
+    left: 25px;
+}
+
+.point-4 {
+    bottom: 15px;
+    right: 25px;
+}
+.point-5 {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.connection {
+    position: absolute;
+    width: 130px;
+    height: 3px;
+    background: #6a0dad;
+    opacity: 0.55;
+    transform-origin: center left;
+    z-index: 2;
+    animation: connectionPulse 2.5s ease-in-out infinite;
+}
+
+..connection-1 {
+    --angle: 35deg;
+    top: 65px;
+    left: 58px;
+}
+.connection-2 {
+    --angle: -44deg;
+    top: 50%;
+    left: 50%;
+}
+
+
+.connection-3 {
+    --angle: -35deg;
+    bottom: 65px;
+    left: 58px;
+}
+
+.connection-4 {
+    --angle: 44deg;
+    top: 50%;
+    left: 50%;
+}
+
+.connection-5 {
+    --angle: 90deg;
+    top: 50%;
+    left: 50%;
+    transform-origin: left center;
+}
+}
+
+@keyframes pointPulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.25);
+    }
+}
+
+@keyframes connectionPulse {
+    0% {
+        opacity: 0;
+        transform: rotate(var(--angle)) scaleX(0);
+    }
+
+    50% {
+        opacity: 0.8;
+        transform: rotate(var(--angle)) scaleX(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: rotate(var(--angle)) scaleX(0);
+    }
+}
