@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mon profil - PI Community Builder</title>
+
+    <link rel="stylesheet" href="profil.css">
+</head>
+
+<body>
+
+    <div class="profile-container">
+
+        <header class="profile-header">
+
+            <div class="profile-avatar">
+                👤
+            </div>
+
+            <h1>Mon profil</h1>
+
+            <p>
+                PI COMMUNITY BUILDER
+            </p>
+
+        </header>
+
+
+        <main class="profile-content">
+
+            <section class="profile-card">
+
+                <h2>Informations personnelles</h2>
+
+                <div class="profile-info">
+                    <span>Nom d'utilisateur</span>
+                    <strong id="profileUsername">
+                        Non connecté
+                    </strong>
+                </div>
+
+                <div class="profile-info">
+                    <span>Statut</span>
+                    <strong id="profileStatus">
+                        Non déterminé
+                    </strong>
+                </div>
+
+                <div class="profile-info">
+                    <span>Pays</span>
+                    <strong id="profileCountry">
+                        Non renseigné
+                    </strong>
+                </div>
+
+                <div class="profile-info">
+                    <span>Ville</span>
+                    <strong id="profileCity">
+                        Non renseignée
+                    </strong>
+                </div>
+
+            </section>
+
+
+            <section class="profile-card">
+
+                <h2>Mes communautés</h2>
+
+                <div id="myGroups">
+
+                    <p>
+                        Vous n'avez encore rejoint aucun groupe.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <section class="profile-card">
+
+                <h2>Mon activité</h2>
+
+                <div class="activity-item">
+                    👥 Groupes rejoints :
+                    <strong id="groupsCount">0</strong>
+                </div>
+
+                <div class="activity-item">
+                    💡 Idées proposées :
+                    <strong id="ideasCount">0</strong>
+                </div>
+
+                <div class="activity-item">
+                    🤝 Invitations envoyées :
+                    <strong id="invitationsCount">0</strong>
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="../supabase/supabase.js"></script>
+<script src="profil.js"></script>
+
+</body>
+
+</html>

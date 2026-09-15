@@ -1,0 +1,184 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    width: 100%;
+    min-height: 100%;
+    font-family: Arial, sans-serif;
+    background: #dcd0ff;
+    color: #222;
+}
+
+.profile-container {
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* =========================
+   EN-TÊTE
+========================= */
+
+.profile-header {
+    background: #6a0dad;
+    color: white;
+    text-align: center;
+    padding: 30px 15px 25px;
+}
+
+.profile-avatar {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #ffd600;
+    border-radius: 50%;
+
+    font-size: 55px;
+}
+
+.profile-header h1 {
+    margin: 5px 0;
+    color: #ffd600;
+    font-size: 28px;
+}
+
+.profile-header p {
+    margin: 5px 0 0;
+    color: #e5d5ff;
+    font-size: 15px;
+}
+
+/* =========================
+   CONTENU
+========================= */
+
+.profile-content {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px 15px 35px;
+}
+
+/* =========================
+   CARTES
+========================= */
+
+.profile-card {
+    background: #f4efff;
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 18px;
+
+    box-shadow: 0 5px 16px rgba(0, 0, 0, .12);
+    border-left: 5px solid #6a0dad;
+}
+
+.profile-card h2 {
+    margin: 0 0 18px;
+    color: #6a0dad;
+    font-size: 20px;
+}
+
+/* =========================
+   INFORMATIONS
+========================= */
+
+.profile-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 12px 0;
+    border-bottom: 1px solid #ddd;
+    gap: 15px;
+}
+
+.profile-info:last-child {
+    border-bottom: none;
+}
+
+.profile-info span {
+    color: #666;
+    font-size: 15px;
+}
+
+.profile-info strong {
+    color: #4a148c;
+    font-size: 15px;
+    text-align: right;
+}
+
+/* =========================
+   COMMUNAUTÉS
+========================= */
+
+#myGroups p {
+    margin: 0;
+    color: #666;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+/* =========================
+   ACTIVITÉ
+========================= */
+
+.activity-item {
+    padding: 12px 0;
+    border-bottom: 1px solid #ddd;
+    font-size: 15px;
+}
+
+.activity-item:last-child {
+    border-bottom: none;
+}
+
+.activity-item strong {
+    color: #6a0dad;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .profile-header {
+        padding: 25px 10px 20px;
+    }
+
+    .profile-avatar {
+        width: 85px;
+        height: 85px;
+        font-size: 48px;
+    }
+
+    .profile-header h1 {
+        font-size: 24px;
+    }
+
+    .profile-content {
+        padding: 15px 10px 30px;
+    }
+
+    .profile-card {
+        padding: 16px;
+    }
+
+    .profile-card h2 {
+        font-size: 18px;
+    }
+
+    .profile-info span,
+    .profile-info strong,
+    .activity-item {
+        font-size: 14px;
+    }
+}
