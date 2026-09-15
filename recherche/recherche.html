@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Recherche de groupe</title>
+
+    <link rel="stylesheet" href="recherche.css">
+
+</head>
+
+<body>
+
+    <div class="recherche">
+
+        <div class="search-card">
+
+            <h3 id="searchTitle">
+                Recherche de groupe
+            </h3>
+
+            <div class="search-box">
+
+<input
+    type="text"
+    id="searchInput"
+    placeholder="Pays, ville, village ou famille"
+    oninput="searchGroups(this.value)">>
+
+                <button id="searchButton"
+                        onclick="searchGroup()">
+                    🔍
+                </button>
+
+            </div>
+
+        </div>
+
+        <div id="groupFound"
+             class="group-found"
+             style="display:none;">
+
+            <h3>
+                🔎 Groupe trouvé
+            </h3>
+
+            <p id="foundName"></p>
+
+            <p id="foundType"></p>
+
+            <p id="foundCountry"></p>
+
+            <p id="foundMembers"></p>
+
+        </div>
+
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script src="../supabase/supabase.js"></script>
+
+<script src="recherche.js"></script>
+</body>
+
+</html>
