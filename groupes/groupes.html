@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Voir les groupes - PI Community Builder</title>
+
+    <link rel="stylesheet" href="groupes.css">
+</head>
+
+<body>
+
+    <!-- ========================================
+         ZONE FIXE
+         ======================================== -->
+
+    <header class="groups-header">
+
+        <h1>👥 Voir les groupes</h1>
+
+        <p class="subtitle">
+            Découvrez les communautés de PI Community Builder
+        </p>
+
+        <div class="groups-toolbar">
+
+            <span id="groupsCounter" class="groups-counter">
+                👥 0
+            </span>
+
+            <nav class="group-filters">
+
+                <button class="filter-button active" data-type="Groupe Pays">
+                    Pays
+                </button>
+
+                <button class="filter-button" data-type="Groupe Ville">
+                    Ville
+                </button>
+
+                <button class="filter-button" data-type="Groupe Village">
+                    Village
+                </button>
+
+                <button class="filter-button" data-type="Groupe Communauté">
+                    Communauté
+                </button>
+
+                <button class="filter-button" data-type="Groupe Famille">
+                    Famille
+                </button>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- ========================================
+         LISTE DÉFILANTE
+         ======================================== -->
+
+    <main id="groupsList" class="groups-list">
+
+        <p class="loading">
+            Chargement des groupes...
+        </p>
+
+    </main>
+
+
+    <!-- ========================================
+         SUPABASE
+         ======================================== -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="../supabase/supabase.js"></script>
+    <script src="groupes.js"></script>
+
+</body>
+
+</html>
